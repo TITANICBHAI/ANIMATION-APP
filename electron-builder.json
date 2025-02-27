@@ -1,0 +1,37 @@
+
+{
+  "appId": "com.yourapp.animationeditor",
+  "productName": "Animation Editor",
+  "directories": {
+    "output": "electron-dist",
+    "buildResources": "client/public"
+  },
+  "files": [
+    "dist/**/*",
+    "electron/**/*",
+    "package.json"
+  ],
+  "extraResources": [
+    {
+      "from": "dist",
+      "to": "dist",
+      "filter": ["**/*"]
+    }
+  ],
+  "win": {
+    "target": "nsis",
+    "icon": "client/public/favicon.ico"
+  },
+  "mac": {
+    "target": "dmg",
+    "icon": "client/public/favicon.ico"
+  },
+  "linux": {
+    "target": "AppImage",
+    "icon": "client/public/favicon.ico"
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true
+  }
+}
